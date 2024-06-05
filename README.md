@@ -14,7 +14,7 @@ For more information, see the [course curriculum](https://nextjs.org/learn) on t
 
 ## Ch03
 
-### The <Image> component
+### The Image component
 
 - The <Image> Component is an extension of the HTML <img> tag
 - Preventing layout shift automatically when images are loading
