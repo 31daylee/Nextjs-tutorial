@@ -47,9 +47,23 @@ For more information, see the [course curriculum](https://nextjs.org/learn) on t
 - Active links
   <br />
   <br />
-  Checking the user's current path: `usePathname()`
+  #### Checking the user's current path: `usePathname()`
 - You can use the hook called `usePathname()`
+
   1. Add React's "use client" directive to the top of the file
   2. Import usePathname() from next/navigation
   3. Assign the path to a variable called pathname inside your `<NavLinks />` component
   4. Add styles using `clsx`
+
+  ## Ch06
+
+  ### Vercel Postgres
+
+#### install
+
+> npm i @vercel/postgres
+
+#### Database seed
+
+1. Add "seed": "node -r dotenv/config ./scripts/seed.js" for "scripts" in package.json file
+2. `npm run seed`
