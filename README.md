@@ -46,6 +46,7 @@ For more information, see the [course curriculum](https://nextjs.org/learn) on t
 - The `<Link href="...">`Component is similar to `<a href="...">`
 - Active links
   <br />
+  <br />
   Checking the user's current path: `usePathname()`
 - You can use the hook called `usePathname()`
   1. Add React's "use client" directive to the top of the file
