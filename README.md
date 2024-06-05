@@ -44,3 +44,6 @@ For more information, see the [course curriculum](https://nextjs.org/learn) on t
 ### The Link component
 
 - The `<Link href="...">`Component is similar to `<a href="...">`
+- Active links
+  <br/>
+  > > Checking the path : `usePathname()`
