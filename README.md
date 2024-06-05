@@ -20,3 +20,15 @@ For more information, see the [course curriculum](https://nextjs.org/learn) on t
 - Preventing layout shift automatically when images are loading
 - Resizing images to avoid shipping large images to devices with a smaller viewport
 - Lazy loading images by default (images load as they enter the viewport)
+
+## Ch04
+
+### Creating the dashboard page
+
+- For creating a new pages in Next.js : create a new route segment using a folder, and add a page file inside it.
+  ex) If you want to create the new pages like http://localhost:3000/dashboard/customers
+  then create a folder with the name "Customers" and add a page.tsx file inside it. > app/dashboard/customers/page.tsx
+
+- Root layout vs Custom layout
+  Root layout : /app/layout.tsx -> global
+  Custom layout : /app/dashboard/layout.tsx -> only dashboard
