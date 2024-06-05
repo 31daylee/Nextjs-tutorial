@@ -16,7 +16,7 @@ For more information, see the [course curriculum](https://nextjs.org/learn) on t
 
 ### The Image component
 
-- The `<`Image`>` Component is an extension of the HTML <img> tag
+- The `<Image>` Component is an extension of the HTML <img> tag
 - Preventing layout shift automatically when images are loading
 - Resizing images to avoid shipping large images to devices with a smaller viewport
 - Lazy loading images by default (images load as they enter the viewport)
@@ -43,4 +43,4 @@ For more information, see the [course curriculum](https://nextjs.org/learn) on t
 
 ### The Link component
 
-- The <Link> Component is similar to
+- The `<Link href="...">`Component is similar to `<a href="...">`
