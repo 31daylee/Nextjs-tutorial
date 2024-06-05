@@ -26,9 +26,15 @@ For more information, see the [course curriculum](https://nextjs.org/learn) on t
 ### Creating the dashboard page
 
 - For creating a new pages in Next.js : create a new route segment using a folder, and add a page file inside it.
+  <br/>
   ex) If you want to create the new pages like http://localhost:3000/dashboard/customers
-  then create a folder with the name "Customers" and add a page.tsx file inside it. > app/dashboard/customers/page.tsx
+  then create a folder with the name "Customers" and add a page.tsx file inside it.
+  <br/>
+
+  > app/dashboard/customers/page.tsx
 
 - Root layout vs Custom layout
+  <br/>
   Root layout : /app/layout.tsx -> global
+  <br/>
   Custom layout : /app/dashboard/layout.tsx -> only dashboard
