@@ -54,13 +54,13 @@ For more information, see the [course curriculum](https://nextjs.org/learn) on t
   3. Assign the path to a variable called pathname inside your `<NavLinks />` component
   4. Add styles using `clsx`
 
-  ## Ch06
+## Ch06
 
-  ### Vercel Postgres
+### Vercel Postgres
 
 #### install
 
-> npm i @vercel/postgres
+`npm i @vercel/postgres`
 
 #### Database seed
 
