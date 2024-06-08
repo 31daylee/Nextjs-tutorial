@@ -66,3 +66,9 @@ For more information, see the [course curriculum](https://nextjs.org/learn) on t
 
 1. Add "seed": "node -r dotenv/config ./scripts/seed.js" for "scripts" in package.json file
 2. `npm run seed`
+
+## Ch07
+
+### Waterfalls
+
+- A "waterfall" refers to a sequence of network requests that depend on the completion of previous requests
