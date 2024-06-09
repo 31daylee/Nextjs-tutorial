@@ -102,3 +102,20 @@ For more information, see the [course curriculum](https://nextjs.org/learn) on t
 Added an artificial 3-second delay to simulate a slow data fetch
 `await new Promise((resolve) => setTimeout(resolve, 3000))`
 With dynamic rendering, your application is only as fast as your slowest data fetch
+
+## Ch09
+
+### Streaming
+
+- Streaming is a data transfer technique that allows you to break down a route into smaller "chunks" and progressively stream them from the server to the client as they become ready
+- How to implement it?
+  1. At the page level, with the `loading.tsx` file.
+     > /app/dashboard/loading.tsx
+     1. `return <div>Loading...</div>`
+     2. `return <DashboardSkeleton />;`
+  2. For specific components, with `<Suspense>`
+
+### () folder
+
+- It won't be included in the URL path.
+  ex) `/dashboard/(overview)/page.tsx` become `/dashboard`
