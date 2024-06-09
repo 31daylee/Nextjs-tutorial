@@ -119,3 +119,38 @@ With dynamic rendering, your application is only as fast as your slowest data fe
 
 - It won't be included in the URL path.
   ex) `/dashboard/(overview)/page.tsx` become `/dashboard`
+
+## Ch11
+
+### Search
+
+- `useSearchParams` : Allows you to access the parameters of the current URL. For example, the search params for this URL `/dashboard/invoices?page=1&query=pending` would look like this: `{page: '1', query: 'pending'}`
+- `usePathname` : Lets you read the current URL's pathname
+- `useRouter` : Enables navigation between routes within client components programmatically
+- `URLSearchParams` : a Web API that provides utility methods for manipulating the URL query parameters
+  <br/>
+  Instead of creating a complex string literal, you can use it to get the params string like `?page=1&query=a`
+  <br/>
+
+### `defaultValue` vs `value` / Controlled vs. Uncontrolled
+
+- If you're using state to manage the value of an input, you'd use the value attribute to make it a controlled component. This means React would manage the input's state.
+
+However, since you're not using state, you can use defaultValue. This means the native input will manage its own state. This is okay since you're saving the search query to the URL instead of state.
+
+### `useSearchParams()` hook vs. the `searchParams` prop
+
+- `<Search>`is a Client Component, so you used the `useSearchParams()` hook to access the params from the client.
+- `<Table>` is a Server Component that fetches its own data, so you can pass the `searchParams` prop from the page to the component.
+
+### Installation of Debouncing
+
+> npm i use-debounce
+
+#### Debouncing?
+
+- a programming practice that limits the rate at which a function can fire. In our case, you only want to query the database when the user has stopped typing
+
+#### How?
+
+- In your `<Search>` Component, import a function called `useDebouncedCallback`
