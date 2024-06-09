@@ -72,3 +72,33 @@ For more information, see the [course curriculum](https://nextjs.org/learn) on t
 ### Waterfalls
 
 - A "waterfall" refers to a sequence of network requests that depend on the completion of previous requests
+- In the case of data fetching, each request can only begin once the previous request has returned data
+
+### Parallel data fetching
+
+- A common way to avoid waterfalls is to initiate all data requests at the same time - in parallel
+  ex) await Promise.all()
+
+## Ch08
+
+### Static Rendering
+
+- With static rendering, data fetching and rendering happens on the server at build time (when you deploy) or during revalidation
+- Static rendering is useful for UI with no data or data that is shared across users, such as a static blog post or a product page
+
+### Dynamic Rendering
+
+- With dynamic rendering, content is rendered on the server for each user at request time (when the user visits the page)
+
+### unstable_noStore
+
+- Next.js API
+- You can use this API inside your Server Components or data fetching functions to opt out of static rendering
+  ex) import { unstable_noStore as noStore } from 'next/cache';
+  `noStore()`
+
+### Slow Data Fetch
+
+Added an artificial 3-second delay to simulate a slow data fetch
+`await new Promise((resolve) => setTimeout(resolve, 3000))`
+With dynamic rendering, your application is only as fast as your slowest data fetch
