@@ -132,13 +132,13 @@ With dynamic rendering, your application is only as fast as your slowest data fe
   Instead of creating a complex string literal, you can use it to get the params string like `?page=1&query=a`
   <br/>
 
-### `defaultValue` vs `value` / Controlled vs. Uncontrolled
+#### `defaultValue` vs `value` / Controlled vs. Uncontrolled
 
 - If you're using state to manage the value of an input, you'd use the value attribute to make it a controlled component. This means React would manage the input's state.
 
 However, since you're not using state, you can use defaultValue. This means the native input will manage its own state. This is okay since you're saving the search query to the URL instead of state.
 
-### `useSearchParams()` hook vs. the `searchParams` prop
+#### `useSearchParams()` hook vs. the `searchParams` prop
 
 - `<Search>`is a Client Component, so you used the `useSearchParams()` hook to access the params from the client.
 - `<Table>` is a Server Component that fetches its own data, so you can pass the `searchParams` prop from the page to the component.
