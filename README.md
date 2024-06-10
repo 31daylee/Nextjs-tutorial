@@ -211,3 +211,12 @@ However, since you're not using state, you can use defaultValue. This means the 
 
 - You can create dynamic route segments by wrapping a folder's name in square brackets. For example, `[id]`, `[post]` or `[slug]`
   > invoices/[id]/edit/page.tsx
+
+2. Read the invoice `id` from page `params`
+3. Fetch the specific invoice
+4. Pass the `id` to the Server Action
+
+### Deleting an invoice
+
+1. Wrap the delete button in a `<form>` element and pass the `id` to the Server Action using `bind`
+   > export function DeleteInvoice({ id }: { id: string }) { const deleteInvoiceWithId = deleteInvoice.bind(null, id);
