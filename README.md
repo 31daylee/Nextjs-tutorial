@@ -166,6 +166,9 @@ However, since you're not using state, you can use defaultValue. This means the 
 
 1. Create a form
    > `/dashboard/invoices/create/page.tsx`
+
+<br/>
+
 2. Create a Server Action and invoke it from the form
 
 - Use server
@@ -178,10 +181,14 @@ However, since you're not using state, you can use defaultValue. This means the 
 
   > `use server export async function createInvoice(formData: FormData) {}`
 
+<br/>
+
 3. Inside your Server Action, extract the data from the `formData` object.
 
 - `.get(name)` : To extract the values of `formData`
 - `Object.fromEntries(formData.entries())` : To extract many fields of form
+
+<br/>
 
 4. Validate and prepare the data
 
@@ -189,11 +196,14 @@ However, since you're not using state, you can use defaultValue. This means the 
 - Create new date ("YYYY-MM-DD")
   `const date = new Data().toISOString().split('T')[0]`
 
+<br/>
+
 5. Inserting the data into your database
 6. Revalidate and redirect
 
 - `revalidatePath` : To clear the cache and trigger a new request to the server.
 - `redirect` from 'next/navigation': redirect function
+  <br/>
 
 ### Update Invoices
 
