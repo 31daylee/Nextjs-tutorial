@@ -221,3 +221,12 @@ However, since you're not using state, you can use defaultValue. This means the 
 1. Wrap the delete button in a `<form>` element and pass the `id` to the Server Action using `bind`
    <br/>
    `export function DeleteInvoice({ id }: { id: string }) { const deleteInvoiceWithId = deleteInvoice.bind(null, id);`
+
+## Ch14
+
+### Using the ESLint accessibility plugin
+
+1. Add `next lint` as a script in `package.json` file.
+   > "lint": "next lint"
+2. Run npm run lint in your terminal
+   > npm run lint
