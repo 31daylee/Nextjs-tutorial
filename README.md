@@ -219,4 +219,4 @@ However, since you're not using state, you can use defaultValue. This means the 
 ### Deleting an invoice
 
 1. Wrap the delete button in a `<form>` element and pass the `id` to the Server Action using `bind`
-   > export function DeleteInvoice({ id }: { id: string }) { const deleteInvoiceWithId = deleteInvoice.bind(null, id);
+   `export function DeleteInvoice({ id }: { id: string }) { const deleteInvoiceWithId = deleteInvoice.bind(null, id);`
