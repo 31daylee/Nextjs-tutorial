@@ -230,3 +230,12 @@ However, since you're not using state, you can use defaultValue. This means the 
    > "lint": "next lint"
 2. Run npm run lint in your terminal
    > npm run lint
+
+## Ch15
+
+### NextAuth.js
+
+1. Install
+   > npm install next-auth@beta
+2. Generate a secret key
+   > openssl rand -base64 32
