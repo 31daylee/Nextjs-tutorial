@@ -154,3 +154,50 @@ However, since you're not using state, you can use defaultValue. This means the 
 #### How?
 
 - In your `<Search>` Component, import a function called `useDebouncedCallback`
+
+## Ch12
+
+### Using forms with Server Actions
+
+- In React, you can use the action attribute in the `<form>` element to invoke actions. The action will automatically receive the native FormData object, containing the captured data
+- Revalidate the associated cache using APIs : `revalidatePath`, `revalidateTag`
+
+### Making Invoice
+
+1. Create a form
+   > `/dashboard/invoices/create/page.tsx`
+2. Create a Server Action and invoke it from the form
+
+#### Use server
+
+> `use server`
+
+- By adding the `'use server'`, you mark all the exported functions within the file as server functions. These server functions can then be imported into Client and Server components, making them extremely versatile
+
+#### Server actions
+
+> `use server export async function createInvoice(formData: FormData) {}`
+
+3. Inside your Server Action, extract the data from the `formData` object.
+
+- `.get(name)` : To extract the values of `formData`
+- `Object.fromEntries(formData.entries())` : To extract many fields of form
+
+4. Validate and prepare the data
+
+- `Zod` : a TypeScript-first validation library
+- Create new date ("YYYY-MM-DD")
+  `const date = new Data().toISOString().split('T')[0]`
+
+5. Inserting the data into your database
+6. Revalidate and redirect
+
+- `revalidatePath` : To clear the cache and trigger a new request to the server.
+- `redirect` from 'next/navigation': redirect function
+
+### Update Invoices
+
+1. Create a Dynamic Route Segment with the invoice `id`
+
+- You can create dynamic route segments by wrapping a folder's name in square brackets. For example, `[id]`, `[post]` or `[slug]`
+  > invoices/[id]/edit/page.tsx
