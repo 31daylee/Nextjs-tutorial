@@ -239,3 +239,14 @@ However, since you're not using state, you can use defaultValue. This means the 
    > npm install next-auth@beta
 2. Generate a secret key
    > openssl rand -base64 32
+
+## Ch16
+
+### Metadata
+
+- In web development, metadata provides additional details about a webpage. Metadata is not visible to the users visiting the page. Instead, it works behind the scenes, embedded within the page's HTML, usually within the `<head>` element
+  1. Title Metadata : Responsible for the title of a webpage that is displayed on the browser tab
+  2. Description Metadata : This metadata provides a brief overview of the webpage content and is often displayed in search engine results
+  3. Keyword Metadata : This metadata includes the keywords related to the webpage content, helping search engines index the page
+  4. Open Graph Metadata : This metadata enhances the way a webpage is represented when shared on social media platforms, providing information such as the title, description, and preview image
+  5. Favicon Metadata : This metadata links the favicon (a small icon) to the webpage, displayed in the browser's address bar or tab
