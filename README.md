@@ -168,15 +168,15 @@ However, since you're not using state, you can use defaultValue. This means the 
    > `/dashboard/invoices/create/page.tsx`
 2. Create a Server Action and invoke it from the form
 
-#### Use server
+- Use server
 
-> `use server`
+  > `use server`
 
-- By adding the `'use server'`, you mark all the exported functions within the file as server functions. These server functions can then be imported into Client and Server components, making them extremely versatile
+  - By adding the `'use server'`, you mark all the exported functions within the file as server functions. These server functions can then be imported into Client and Server components, making them extremely versatile
 
-#### Server actions
+- Server actions
 
-> `use server export async function createInvoice(formData: FormData) {}`
+  > `use server export async function createInvoice(formData: FormData) {}`
 
 3. Inside your Server Action, extract the data from the `formData` object.
 
