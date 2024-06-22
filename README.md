@@ -5,6 +5,7 @@ This is the starter template for the Next.js App Router Course. It contains the 
 For more information, see the [course curriculum](https://nextjs.org/learn) on the Next.js Website.
 
 # Nextjs-tutorial
+![Screenshot_1](https://github.com/31daylee/Nextjs-tutorial/assets/136422529/59118c49-2d12-4612-b239-ae57f7231876)
 
 ## Ch02
 
